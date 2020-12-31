@@ -1,0 +1,368 @@
+\documentclass[8pt]{beamer}
+\usetheme{Berlin}
+\usepackage{multicol}
+\usepackage{graphicx}
+\linespread{1.35}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows,automata}
+
+
+\begin{document}
+\begin{frame}
+
+\begin{flushright}
+ \texttt{Finite Automata} \hspace*{0.10cm}\textbf{$|$} \textbf{85}\hspace*{0.5cm}
+\end{flushright}
+
+\section*{Myhill–Nerode Theorem}
+
+\vspace*{0.5cm}
+For the other states $\{A, E, G\}$, for an input of either 0 or 1, the next state belongs to $Q_2$.\\
+This divides $Q_2$ into two parts: $\{A, E, G\}$ and $\{B, D, F, H\}$. Let us name them as $Q_3$ and $Q_4$.\\
+The divided sets are\\
+
+\vspace*{0.3cm}
+\pause
+\begin{center}
+  $S_2: \{\{C\}, \{A, E, G\}, \{B, D, F, H\}\}.$ \\
+\end{center}
+
+\pause
+Consider the subset of states $\{A, E, G\}$. A and E with input 0 and 1 both go to F, B and F, H, respectively,
+i.e., to the subset $\{B, D, F, H\}$. G with input $0$ and $1$ goes to E, G, i.e., the same subset. Here, $\{A, E, G\}$
+is divided into two subsets: $\{A, E\}$ and $\{G\}$.\\
+\end{frame}
+
+\begin{frame}
+\hspace*{0.4cm} The subset $\{B, D, F, H\}$ can be divided depending on the input and the next state combination. B and
+H produce the next states C and G for input $0$ and $1$, respectively.\\
+\hspace*{0.4cm} D and F produce the next states G and C for input $0$ and $1$, respectively. So, the set $\{B, D, F, G\}$ is
+divided into two subsets: $\{B, H\}$ and $\{D, F\}$.\\
+\hspace*{0.4cm} The divided sets are\\
+
+\vspace*{0.3cm}
+\pause
+\begin{center}
+  $S_3: \{\{C\}, \{A, E\}, \{G\}, \{B, H\}, \{D, F\}\} $. \\
+\end{center}
+
+\pause
+The subsets cannot be divided further making these as the states of minimized DFA. Let us rename the
+subsets as $q_0$, $q_1$, $q_2$, $q_3$, and $q_4$. The initial state was A, and so here the initial state is $\{A, E\}$, i.e., $q_1$. The
+final state was C, and so here the final state is $\{C\}$, i.e., $q_0$. The tabular representation of minimized DFA is\\
+\end{frame}
+
+\begin{frame}
+\begin{center}
+\section{picture}
+\includegraphics[width=7cm,height=4cm]{85.png}
+\end{center}
+
+\pause
+\large{
+\textbf{3.15 Myhill–Nerode Theorem}
+}
+
+\vspace*{0.2cm}
+\emph{John My hill and A nil Nerode} of the University of Chicago proposed a theorem in 1958 which provides
+a necessary and sufficient condition for a language to be regular. This theorem can also be used to
+minimize a DFA. But before going into the details of the theorem statement, we need to know some
+definitions related to the theorem.
+
+\vspace*{0.4cm}
+\end{frame}
+
+
+\begin{frame}
+\large{
+\textbf{3.15.1 Equivalence Relation}
+}
+
+\vspace*{0.2cm}
+\begin{itemize}
+  \item $A$ relation $R$ in set $S$ is reflexive if $xRx$ for every x in S.\\
+  \item $A$ relation $R$ in set $S$ is symmetric if for $x$, $y$ in $S$, $yRx$ whenever $xRy$.\\
+  \item $A$ relation $R$ in set $S$ is transitive if for $x$, $y$, and $z$ in $S$, $xRz$ whenever $xRy$ and $yRz$.\\
+\end{itemize}
+
+\vspace*{0.2cm}
+A relation R in set S is called an equivalence relation if it is reflexive, symmetric, and transitive.\\
+
+\vspace*{0.4cm}
+\large{
+\textbf{3.15.1.1 Right Invariant}\\
+}
+
+\vspace*{0.2cm}
+An equivalence relation $R$ on strings of symbols from some alphabet $\Sigma$ is said to be right invariant if for
+all $x, y \in \Sigma*$ with $xRy$ and all $w \in \Sigma*$ we have that $xw R yw$. This definition states that an equivalence\\
+\end{frame}
+
+\begin{frame}
+\section*{Statement of the Myhill–Nerode Theorem}
+\begin{flushleft}
+    \textbf{86}\hspace*{0.1cm} \textbf{$|$} \hspace*{0.1cm} \texttt{Introduction to Automata Theory, Formal Languages and Computation}
+  \end{flushleft}
+
+\vspace*{0.5cm}
+relation has the right invariant property if two equivalent strings (x and y) that are in the language still
+are equivalent if a third string (w) is appended to the right of both of them.\\
+
+\vspace*{0.2cm}
+\large{
+\textbf{3.15.2 Statement of the Myhill–Nerode Theorem}
+}
+
+\vspace*{0.1cm}
+The Myhill–Nerode theorem states that the following three statements are equivalent.\\
+
+\small{
+\begin{enumerate}
+  \item The set $L$, a subset of $\Sigma*$, is accepted by a $DFA$, i.e., $L$ is a regular language.\\
+  \item There is a right-invariant equivalence relation R of finite index such that L is the union of some of
+the equivalence classes of $R$.\\
+  \item Let equivalence relation $R_L$ be defined as $xR_Ly$, if and only if for all z in $\Sigma*$, xz is in L exactly when
+yz is in L then $R_L$ is of finite index.\\
+\end{enumerate}
+}
+\vspace*{0.2cm}
+\end{frame}
+
+\begin{frame}
+\large{
+\textbf{3.15.3 Myhill–Nerode Theorem in Minimizing a DFA}
+}
+
+\vspace*{0.1cm}
+\pause
+\textbf{Step I:} Build a two-dimensional matrix labelled by the states of the given DFA at the left and bottom
+side. The major diagonal and the upper triangular parts are shown as dashes.\\
+
+\vspace*{1mm}
+\textbf{Step II:} One of the three symbols, X, x, or 0 are put in the locations where there is no dash.\\
+
+\vspace*{0.1cm}
+\pause
+\small{
+\begin{enumerate}
+  \item Mark X at p, q in the lower triangular part such that p is the fi nal state and Q is the non-fi nal state.\\
+  \item Make distinguished pair combination of the non-fi nal states. If there are n number of non-fi nal
+states, there are $nC_2$ number of distinguished pairs.\\
+Take a pair $(p, q)$ and find $(r, s)$, such that $r = \delta(p, a)$ and $s = \delta(q, a)$. If in the place of $(r, s)$ there
+is $X$ or $x$, in the place of $(p, q)$, there will be $x$.\\
+  \item If (r, s) is neither X nor x, then (p, q) is 0.\\
+  \item Repeat (2) and (3) for fi nal states also.\\
+\end{enumerate}
+}
+\vspace*{0.1cm}
+\end{frame}
+
+\begin{frame}
+\textbf{Step III:} The combination of states where there is 0, they are the states of the minimized machine.\\
+
+\vspace*{0.1cm}
+Consider the following examples to get the earlier discussed method.\\
+
+\vspace*{0.1cm}
+ \fcolorbox{red}{blue}{\textbf{\textcolor[rgb]{1.00,1.00,1.00}{Example 3.27}}}\hspace*{0.1cm} \texttt{Minimize the following DFA using the Myhill–Nerode theorem.}
+
+\pause
+\small{
+\begin{center}
+\begin{tabular}{ccc}
+ \hline
+
+ \hline
+
+ \hline
+
+ \hline
+ & \multicolumn{2}{c}{$Next State$}\\
+ \cline{2-3}
+ $Present State$ &  $I/P=a$ & $I/P=b$\\
+\hline
+$\rightarrow$A& B& E \\
+           B &C& D \\
+           C &H& I \\
+           D &I& H \\
+           E &F& G \\
+           F &H& I \\
+           G &H& I \\
+           H &H& H \\
+           I &I& I \\
+ \hline
+
+ \hline
+
+ \hline
+
+ \hline
+\end{tabular}
+\end{center}
+Here C, D, F, G are final states.\\
+}
+\end{frame}
+
+\begin{frame}
+\begin{flushright}
+ \texttt{Finite Automata} \hspace*{0.10cm}\textbf{$|$} \textbf{87}\hspace*{0.5cm}
+\end{flushright}
+
+\section*{Myhill–Nerode Theorem in Minimizing a DFA}
+
+\vspace*{0.1cm}
+\emph{
+\textbf{Solution:}
+}
+
+\small{
+\textbf{Step I:} Divide the states of the DFA into two subsets: final (F) and non-final $(Q-F)$.\\
+
+\begin{center}
+  $F = \{C, D, F, G\}, Q-F = \{A, B, E, H, I\}$\\
+\end{center}
+
+Make a two-dimensional matrix as shown in Fig. 3.50 labelled at the left and bottom by the states of
+the DFA.\\
+
+\pause
+
+\begin{center}
+\begin{tabular}{cccccccccc}
+\hline
+A& -& -& -& -& -& -& -& -& -\\
+B&  & -& -& -& -& -& -& -& -\\
+C&  &  & -& -& -& -& -& -& -\\
+D&  &  &  & -& -& -& -& -& -\\
+E&  &  &  &  & -& -& -& -& -\\
+F&  &  &  &  &  & -& -& -& -\\
+G&  &  &  &  &  &  & -& -& -\\
+H&  &  &  &  &  &  &  & -& -\\
+I&  &  &  &  &  &  &  &  & -\\
+ &  A& B& C& D& E& F& G& H& I\\
+ \hline
+
+ \hline
+
+ \hline
+
+ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+  \textbf{Fig. 3.50}\\
+\end{center}
+}
+
+\vspace*{0.2cm}
+\end{frame}
+
+\begin{frame}
+\small{
+\textbf{Step II:}
+\begin{enumerate}
+  \item The following combinations are the combination of the beginning and fi nal state.\\
+(A, C), (A, D), (A, F), (A, G), (B, C), (B, D), (B, F), (B, G), (E, C), (E, D), (E, F), (E, G), (H, C),
+(H, D), (H, F), (H, G), (I, C), (I, D), (I, F), (I, G).
+
+Put X in these combinations of states. The modified matrix is given in Fig. 3.51.\\
+
+\pause
+\begin{center}
+\begin{tabular}{cccccccccc}
+\hline
+A& -& -& -& -& -& -& -& -& -\\
+B&  & -& -& -& -& -& -& -& -\\
+C&X &X & -& -& -& -& -& -& -\\
+D&X &X &  & -& -& -& -& -& -\\
+E&  &  &X &X & -& -& -& -& -\\
+F&X &X &  &  &X & -& -& -& -\\
+G&X &X &  &  &X &  & -& -& -\\
+H&  &  &X &X &  &X &X & -& -\\
+I&  &  &X &X &  &X &X &  & -\\
+ & A& B& C& D& E& F& G& H& I\\
+ \hline
+
+ \hline
+
+ \hline
+
+ \hline
+\end{tabular}
+\end{center}
+\begin{center}
+  \textbf{Fig. 3.51}\\
+\end{center}
+  \item The pair combination of non-final states are (A, B), (A, E), (A, H), (A, I), (B, E), (B, H), (B, I),
+(E, H), (E, I), and (H, I).
+\end{enumerate}
+}
+\end{frame}
+
+\begin{frame}
+\section*{Statement of the Myhill–Nerode Theorem}
+\begin{flushleft}
+    \textbf{88}\hspace*{0.1cm} \textbf{$|$} \hspace*{0.1cm} \texttt{Introduction to Automata Theory, Formal Languages and Computation}
+  \end{flushleft}
+
+\vspace*{0.5cm}
+\begin{center}
+  $r = \delta(A, a) \rightarrow B s = \delta(B, a) \rightarrow C$
+\end{center}
+in the place of (B, C) there is X. So, in the place of (A, B), there will be x.\\
+\hspace*{0.4cm} Similarly,\\
+
+\vspace*{0.1cm}
+\hspace*{0.4cm} $(r, s) = \delta((A, E), a) \rightarrow (B, F)$ (there is X). In the place of (A, E), there will be x.\\
+\hspace*{0.4cm} $(r, s) = \delta((A, H), a) \rightarrow (B, H)$ (neither X nor x). In the place of (A, H), there will be 0.\\
+\hspace*{0.4cm} $(r, s) = \delta((A, I), a) \rightarrow (B, I)$ (neither X nor x). In the place of (A, I), there will be 0.\\
+\hspace*{0.4cm} $(r, s) = \delta((B, E), a) \rightarrow (C, F)$ (neither X nor x). In the place of (B, E), there will be 0.\\
+\end{frame}
+
+\begin{frame}
+\hspace*{0.4cm} $(r, s) = \delta((B, H), a) \rightarrow (C, H)$ (there is X). In the place of (B, H), there will be x.\\
+\hspace*{0.4cm} $(r, s) = \delta((B, I), a) \rightarrow (C, I)$ (there is X). In the place of (B, I), there will be x.\\
+\hspace*{0.4cm} $(r, s) = \delta((E, H), a) \rightarrow (F, H)$ (there is X). In the place of (E, H), there will be x.\\
+\hspace*{0.4cm} $(r, s) = \delta((E, I), a) \rightarrow (F, I)$ (there is X). In the place of (E, I), there will be x.\\
+\hspace*{0.4cm} $(r, s) = \delta((H, I), a) \rightarrow (H, I)$ (neither X nor x). In the place of (H, I), there will be 0.\\
+
+\vspace*{0.1cm}
+\fcolorbox{blue}{blue}{3} The pair combination of fi nal states are (C, D), (C, F), (C, G), (D, F), (D, G), and (F, G).\\
+
+\vspace*{0.1cm}
+\hspace*{0.4cm} $(r, s) = \delta((C, D), a) \rightarrow (H, I)$ (neither X nor x). In the place of (C, D), there will be 0.\\
+
+\end{frame}
+
+\begin{frame}
+\hspace*{0.4cm} $(r, s) = \delta((C, F), a) \rightarrow (H, H)$ (there is dash, neither X nor x). In the place of (C, F), there will be 0.\\
+\hspace*{0.4cm} $(r, s) = \delta((C, G), a) \rightarrow (H, H)$ (neither X nor x). In the place of (C, G), there will be 0.\\
+\hspace*{0.4cm} $(r, s) = \delta((D, F), a) \rightarrow (I, H)$ (neither X nor x). In the place of (D, F), there will be 0.\\
+\hspace*{0.4cm} $(r, s) = \delta((D, G), a) \rightarrow (I, H)$ (neither X nor x). In the place of (D, G), there will be 0.\\
+\hspace*{0.4cm} $(r, s) = \delta((F, G), a) \rightarrow (H, H)$ (neither X nor x). In the place of (F, G), there will be 0.\\
+
+\end{frame}
+
+\begin{frame}
+\hspace*{0.4cm} The modified matrix becomes as shown in Fig. 3.52.\\
+\begin{center}
+\section{picture}
+\includegraphics[width=7cm,height=4cm]{88.png}
+\end{center}
+
+The combination of entries 0 are the states of the modified machine. The states of the minimized
+machine are $[A], [B, E], [C, D], [C, F], [C, G], [D, F], [D, G], [F, G]$, and $[H, I]$.\\
+\hspace*{0.4cm} For the minimized machine $M'$\\
+\hspace*{0.4cm} $Q' = (\{A\}, \{B, E\}, \{C, D, F, G\}, \{H, I\}). [C, D], [C, F], [C, G], [D, F], [D, G]$, and $[F, G]$ are
+combined to a new state $[CDFG]$.\\
+
+\begin{center}
+  $\Sigma = \{a, b\} \delta':$ (given in the following table)
+\end{center}
+\end{frame}
+
+\end{document} 
