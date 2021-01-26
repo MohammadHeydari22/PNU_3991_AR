@@ -12,6 +12,22 @@
 - [GitHub](https://github.com/MohammadHeydari22)
 - [certificat](https://mohammadheydari22.github.io/PNU_3991_AR/sololearn.jpg)
 -----------------
+
+
+## پروژه
+- [سامانه خرید بلیط ورزشگاه آزادی](https://github.com/talaazizi/PNU_3991_AR/blob/main/Project.pdf)
+
+------------------
+> ارزیابی ها
+
+##  بخش عمومی
+- [ارزیابی رزومه و انگیزه نامه](https://github.com/talaazizi/PNU_3991_AR/blob/main/_General/MH_CV_CheckList_AR_3991.pdf)
+- [خلاصه ارزیابی بخش عمومی](https://github.com/talaazizi/PNU_3991_AR/blob/main/_General/MH_GeneralSection_CheckList_AR_3991.pdf)
+
+##  بخش دروس کارشناسی
+- [خلاصه ارزیابی درس_نظریه زبان ها و ماشین ها](https://github.com/talaazizi/PNU_3991_AR/blob/main/Languages-and-Machines/SA_Theory-of-Languages-and-Machines_CheckList_AR_3991.pdf)
+
+------------------
 ## گروه ها
 
 1. G-L02
