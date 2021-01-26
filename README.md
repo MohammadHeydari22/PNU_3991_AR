@@ -26,7 +26,7 @@
 - [خلاصه ارزیابی بخش عمومی](https://github.com/MohammadHeydari22/PNU_3991_AR/blob/main/_General/MH_GeneralSection_CheckList_AR_3991.pdf)
 
 ##  بخش دروس کارشناسی
-- [خلاصه ارزیابی درس_نظریه زبان ها و ماشین ها](https://github.com/MohammadHeydari22/PNU_3991_AR/blob/main/Languages-and-Machines/MH_Theory-of-Languages-and-Machines_CheckList_AR_3991.pdf)
+- [خلاصه ارزیابی درس_نظریه زبان ها و ماشین ها](https://github.com/MohammadHeydari22/PNU_3991_AR/blob/main/_General/MH_Theory-of-Languages-and-Machines_CheckList_AR_3991.pdf)
 
 ------------------
 ## گروه ها
