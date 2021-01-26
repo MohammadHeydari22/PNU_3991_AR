@@ -16,17 +16,17 @@
 
 ## پروژه
 - [پایگاه های داده پرکاربرد و قابلیت
-ها و مزایای هرکدام نسبت به یکدیگر](https://github.com/talaazizi/PNU_3991_AR/blob/main/Project.pdf)
+ها و مزایای هرکدام نسبت به یکدیگر](https://github.com/MohammadHeydari22/PNU_3991_AR/blob/main/Project.pdf)
 
 ------------------
 > ارزیابی ها
 
 ##  بخش عمومی
-- [ارزیابی رزومه و انگیزه نامه](https://github.com/talaazizi/PNU_3991_AR/blob/main/_General/MH_CV_CheckList_AR_3991.pdf)
-- [خلاصه ارزیابی بخش عمومی](https://github.com/talaazizi/PNU_3991_AR/blob/main/_General/MH_GeneralSection_CheckList_AR_3991.pdf)
+- [ارزیابی رزومه و انگیزه نامه](https://github.com/MohammadHeydari22/PNU_3991_AR/blob/main/_General/MH_CV_CheckList_AR_3991.pdf)
+- [خلاصه ارزیابی بخش عمومی](https://github.com/MohammadHeydari22/PNU_3991_AR/blob/main/_General/MH_GeneralSection_CheckList_AR_3991.pdf)
 
 ##  بخش دروس کارشناسی
-- [خلاصه ارزیابی درس_نظریه زبان ها و ماشین ها](https://github.com/talaazizi/PNU_3991_AR/blob/main/Languages-and-Machines/SA_Theory-of-Languages-and-Machines_CheckList_AR_3991.pdf)
+- [خلاصه ارزیابی درس_نظریه زبان ها و ماشین ها](https://github.com/MohammadHeydari22/PNU_3991_AR/blob/main/Languages-and-Machines/SA_Theory-of-Languages-and-Machines_CheckList_AR_3991.pdf)
 
 ------------------
 ## گروه ها
