@@ -15,7 +15,8 @@
 
 
 ## پروژه
-- [سامانه خرید بلیط ورزشگاه آزادی](https://github.com/talaazizi/PNU_3991_AR/blob/main/Project.pdf)
+- [پایگاه های داده پرکاربرد و قابلیت
+ها و مزایای هرکدام نسبت به یکدیگر](https://github.com/talaazizi/PNU_3991_AR/blob/main/Project.pdf)
 
 ------------------
 > ارزیابی ها
