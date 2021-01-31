@@ -11,7 +11,7 @@
 - [SOP](https://github.com/MohammadHeydari22/SOP)
 - [GitHub](https://github.com/MohammadHeydari22)
 - [certificate](https://mohammadheydari22.github.io/PNU_3991_AR/sololearn.jpg)
-- [jlord certificate](jlordpatchwork.png)
+- [jlord certificate](jlordpatchwork.PNG)
 -----------------
 
 
