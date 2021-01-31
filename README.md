@@ -10,7 +10,8 @@
 - [Resume](https://mohammadheydari22.github.io/CVE/) 
 - [SOP](https://github.com/MohammadHeydari22/SOP)
 - [GitHub](https://github.com/MohammadHeydari22)
-- [certificat](https://mohammadheydari22.github.io/PNU_3991_AR/sololearn.jpg)
+- [certificate](https://mohammadheydari22.github.io/PNU_3991_AR/sololearn.jpg)
+- [jlord certificate](jlordpatchwork.png)
 -----------------
 
 
